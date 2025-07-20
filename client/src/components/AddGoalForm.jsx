@@ -6,31 +6,19 @@ function AddGoalForm({ onAddGoal }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
     const newGoal = {
       title,
-      targetAmount: parseFloat(targetAmount),
+      targetAmount: Number(targetAmount),
       currentAmount: 0,
     };
-
-    fetch("http://localhost:3000/goals", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newGoal),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        onAddGoal(data);
-        setTitle("");
-        setTargetAmount("");
-      });
+    onAddGoal(newGoal);
+    setTitle("");
+    setTargetAmount("");
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add a New Goal</h2>
+    <form onSubmit={handleSubmit} className="add-goal-form">
+      <h2>Add New Goal</h2>
       <input
         type="text"
         placeholder="Goal Title"

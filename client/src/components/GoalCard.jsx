@@ -1,7 +1,6 @@
 import React from "react";
 
 function GoalCard({ goal, onDelete, onDeposit }) {
-  
   function handleDepositClick() {
     const amount = prompt("How much do you want to add?");
     if (amount && !isNaN(amount)) {
