@@ -1,0 +1,22 @@
+{
+  "goals": [
+    {
+      "id": "1",
+      "title": "Buy a laptop",
+      "targetAmount": 5000,
+      "savedAmount": 0
+    },
+    {
+      "id": "2",
+      "title": "Vacation",
+      "targetAmount": 10000,
+      "savedAmount": 0
+    },
+    {
+      "id": "3",
+      "title": "Emergency Fund",
+      "targetAmount": 1500,
+      "savedAmount": 0
+    }
+  ]
+}

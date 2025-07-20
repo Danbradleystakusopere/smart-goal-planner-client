@@ -1,11 +1,9 @@
 import React from "react";
 
-function Overview({ goals }) {
+function SavingsOverview({ goals }) {
   const totalGoals = goals.length;
-  const totalSaved = goals.reduce((sum, goal) => sum + goal.currentAmount, 0);
-  const completedGoals = goals.filter(
-    (goal) => goal.currentAmount >= goal.targetAmount
-  ).length;
+  const totalSaved = goals.reduce((sum, goal) => sum + goal.savedAmount, 0);
+  const completedGoals = goals.filter((goal) => goal.savedAmount >= goal.targetAmount).length;
 
   return (
     <div className="overview">
@@ -17,4 +15,4 @@ function Overview({ goals }) {
   );
 }
 
-export default Overview;
+export default SavingsOverview;
