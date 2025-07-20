@@ -14,5 +14,4 @@ function SavingsOverview({ goals }) {
     </div>
   );
 }
-
 export default SavingsOverview;
